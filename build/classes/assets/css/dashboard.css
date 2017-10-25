@@ -1,0 +1,71 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+
+
+.mainFxmlClass {
+
+}
+.left-pane{
+	 -fx-background-color: 	#498bbf;
+}
+
+.left-upper{
+	  -fx-background-color: 	#ffffff;
+	  -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+	 -fx-font: bold 12pt "helvetica-bold";
+     -fx-text-fill: #000000;
+
+}
+.cmb-date{
+	  -fx-background-color: #2196F3;
+	  -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+	 -fx-font: bold 10pt "helvetica-bold";
+     -fx-text-fill: #000000;
+
+}
+
+.login-indicator{
+	  -fx-background-color:	#00FF00;
+	  -fx-background-radius: 5em;
+	
+	
+
+}
+.label-font{
+	 -fx-font: bold 10pt "helvetica-bold";
+     -fx-text-fill: #ffffff;
+}
+
+.button-left{
+	 -fx-background-color: 	#498bbf;
+	 -fx-font: bold 8pt "helvetica-bold";
+	 -fx-text-fill: #ffffff;
+	 -fx-background-radius:0;
+	 -fx-border-radius:0 ;
+}
+.button-left:hover{
+	 -fx-background-color: 	#ffffff;
+	 -fx-font: bold 8pt "helvetica-bold";
+	 -fx-text-fill: #000000;
+}
+.p-font{
+	 -fx-font: Italic 10pt "helvetica-bold";
+     -fx-text-fill: #000000;
+}
+@font-face {
+    font-family: 'helvetica-bold';
+    src: url('/assets/font-style/helvetica-bold-587f467b29a45.ttf');
+}
+@font-face {
+    font-family: 'helvetica-light';
+    src: url('/assets/font-style/helvetica-light-587f453dbdccd.ttf');
+}
+
+@font-face {
+    font-family: 'helvetica-normal-';
+    src: url('/assets/font-style/helvetica-normal-587f4f12357eb.ttf');
+}
+
+

@@ -1,0 +1,23 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+	-fx-background-radius:0.5em;
+	-fx-border-width:1.5;
+	-fx-border-radius:0.5em ;
+	-fx-border-color:#023358;
+
+
+}
+.button-save{
+	
+   -fx-text-fill: #D3D3D3;
+   -fx-background-color: #3B5998;
+	
+}
+.button-cancel{
+	  -fx-text-fill: #D3D3D3;
+   -fx-background-color: #006600;
+	
+}

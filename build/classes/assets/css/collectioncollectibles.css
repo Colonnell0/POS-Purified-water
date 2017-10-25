@@ -1,0 +1,69 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.button-search{
+	-fx-background-radius:5em;
+	-fx-border-width:2px;
+	-fx-border-radius:5em ;
+	-fx-border-color:#023358;
+    -fx-font: bold  8pt "Arial";
+}
+.txt-search{
+	-fx-background-radius:5em;
+	-fx-border-width:2px;
+	-fx-border-radius:5em ;
+	-fx-border-color:#023358;
+}
+.table-customer{
+	-fx-border-width:2;
+	-fx-border-color:#023358;
+}
+
+.font-header{
+	-fx-font: bold  11pt "Arial";
+}
+.font-sub{
+	 -fx-font: bold  8pt "Arial";
+}
+.font-amount{
+      -fx-font: bold   12pt "Arial";
+       -fx-font: Italic   12pt "Arial";
+}	
+
+.toggle-button:selected {
+   -fx-border-color:#696969;
+}
+.separator .line {
+    -fx-background: #D3D3D3;
+}
+.font-text{
+	-fx-font: bold  10pt "Arial";
+}
+.customer-label{
+	 -fx-font: Italic  8pt "Arial";
+
+}
+
+.button-find{
+   -fx-background-color: white;
+
+}
+.button-find:hover{
+   -fx-background-color: lightgray;
+
+}
+.button-save{
+	
+   -fx-text-fill: #D3D3D3;
+   -fx-background-color: #3B5998;
+	
+}
+.button-cancel{
+	  -fx-text-fill: #D3D3D3;
+   -fx-background-color: #006600;
+	
+}

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="635.0" prefWidth="1000.0" styleClass="mainFxmlClass" stylesheets="@../assets/css/dashboard.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DashboardController">
+   <children>
+      <BorderPane layoutX="54.0" layoutY="88.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <AnchorPane prefWidth="200.0" styleClass="left-pane" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="54.0" prefWidth="200.0" styleClass="left-upper">
+                     <children>
+                        <Label alignment="CENTER" styleClass="left-upper" text="DASHBOARD" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <graphic>
+                              <ImageView fitHeight="19.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/images/dashboard.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Label>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="14.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="15.0">
+                     <image>
+                        <Image url="@../assets/images/Collaborator%20Male-52.png" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="82.0" layoutY="100.0" prefHeight="10.0" prefWidth="10.0" styleClass="login-indicator" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="100.0" />
+                  <Label layoutX="50.0" layoutY="73.0" prefHeight="20.0" prefWidth="149.0" styleClass="label-font" text="Hi Administrator" textFill="WHITE" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="75.0" />
+                  <Label layoutX="95.0" layoutY="95.0" styleClass="p-font" text="Online" AnchorPane.leftAnchor="90.0" AnchorPane.topAnchor="95.0" />
+                  <VBox layoutY="170.0" prefHeight="375.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="170.0">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#dashboard" prefHeight="41.0" prefWidth="200.0" styleClass="button-left" text="Dashboard">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/images/Speedometer-52.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#product" prefHeight="41.0" prefWidth="200.0" styleClass="button-left" text="Products">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/images/Product-52.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="10.0" layoutY="51.0" mnemonicParsing="false" onAction="#sales" prefHeight="41.0" prefWidth="200.0" styleClass="button-left" text="Sales">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/images/Sales%20Performance-52.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="10.0" layoutY="92.0" mnemonicParsing="false" onAction="#transaction" prefHeight="41.0" prefWidth="200.0" styleClass="button-left" text="Transactions">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/images/Banknotes-52.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="10.0" layoutY="133.0" mnemonicParsing="false" onAction="#accounts" prefHeight="41.0" prefWidth="200.0" styleClass="button-left" text="Accounts">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/images/User%20Credentials-32.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="10.0" layoutY="174.0" mnemonicParsing="false" onAction="#customer" prefHeight="41.0" prefWidth="200.0" styleClass="button-left" text="Customers">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/images/direct-customer.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="expenses" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="215.0" mnemonicParsing="false" onAction="#expenses" prefHeight="41.0" prefWidth="200.0" styleClass="button-left" text="Expenses">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/images/Payroll-48.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane fx:id="viewFrame" prefHeight="635.0" prefWidth="790.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

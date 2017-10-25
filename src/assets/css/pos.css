@@ -1,0 +1,173 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+	
+}
+
+
+.pane-left{
+	-fx-background-color: linear-gradient(to bottom, #f2f2f2, #d4d4d4);
+	-fx-border-width: 0 0 0 0;
+	-fx-border-width: 2px;
+	-fx-border-color:#023358;
+	-fx-border-radius: 5.0;
+
+}
+
+.pane-center{
+	-fx-background-color: linear-gradient(to bottom, #f2f2f2, #d4d4d4);
+	-fx-border-width: 0 0 0 0;
+	-fx-border-width: 2px;
+	-fx-border-color:#023358;
+	-fx-border-radius: 5.0;
+
+}
+.pane-right{
+	-fx-background-color: linear-gradient(to bottom, #f2f2f2, #d4d4d4);
+	-fx-border-width: 0 0 0 0;
+	-fx-border-width: 2px;
+	-fx-border-color:#023358;
+	-fx-border-radius: 5.0;
+
+}
+.button-left{
+	-fx-background-color: #79a1b7;
+
+}
+.button-right{
+	-fx-background-color: #79a1b7;
+
+}
+
+
+.button-left:hover{
+    -fx-graphic: url('/assets/images/arrow-right.png');
+    -fx-background-size: 5;
+    -fx-background-repeat: no-repeat;
+ 
+
+}
+.buttonBelow-left{
+	-fx-background-color: #9d8aae;
+}
+
+.buttonBelow-right{
+	-fx-background-color: #9d8aae;
+}
+
+
+.buttonBelow-left:hover{
+    -fx-graphic: url('/assets/images/arrow-left.png');
+    -fx-background-size: 5;
+    -fx-background-repeat: no-repeat;
+ 
+
+}
+.table-border{
+	-fx-background-color: linear-gradient(to bottom, #f2f2f2, #d4d4d4);
+	-fx-border-width: 0 0 2 0;
+	-fx-border-color:#023358;
+	-fx-border-radius: 5.0;
+
+}
+
+
+.pane-centerBelow{
+	-fx-background-color: linear-gradient(to bottom, #f2f2f2, #d4d4d4);
+    -fx-border-width: 0 0 0 0;
+	-fx-border-width: 2px;
+	-fx-border-color:#023358;
+	-fx-border-radius: 5.0;
+
+}
+
+.pane-centerRight{
+    -fx-background-color: linear-gradient(to bottom, #f2f2f2, #d4d4d4);
+    -fx-border-width: 0 0 0 2;
+	-fx-border-color:#023358;
+	-fx-border-radius: 5.0;
+}
+
+.pane-centerLeft{
+    -fx-background-color: linear-gradient(to bottom, #f2f2f2, #d4d4d4);
+    -fx-border-width: 0 0 0 0;
+	-fx-border-color:#023358;
+	-fx-border-radius: 5.0;
+}
+.pane-centerCenter{
+    -fx-background-color: linear-gradient(to bottom, #f2f2f2, #d4d4d4);
+    -fx-border-width: 0 2 0 0;
+	-fx-border-color:#023358;
+	-fx-border-radius: 5.0;
+}
+.grid-button{
+	-fx-background-radius:5em;
+	-fx-inner-border: #023358;
+	-fx-min-width:45px;
+	-fx-min-height:45px;
+	-fx-max-width:45px;
+	-fx-max-height:45px;
+}
+
+.button-search{
+	-fx-background-radius:5em;
+	-fx-border-width:2px;
+	-fx-border-radius:5em ;
+	-fx-border-color:#023358;
+}
+.txt-search{
+	-fx-background-radius:5em;
+	-fx-border-width:2px;
+	-fx-border-radius:5em ;
+	-fx-border-color:#023358;
+}
+
+
+.font-header{
+	 -fx-font: bold  10pt "Arial";
+
+}
+.font-para{
+	 -fx-font: Italic bold 9pt "Arial";
+
+}
+.font-label{
+	 -fx-font: Italic  7pt "Arial";
+}
+.font-transac{
+	  -fx-font: bold  8pt "Arial";
+}
+
+.font-pay{
+	  -fx-font:  10pt "Arial";
+}
+.font-pos{
+	  -fx-font: bold  10pt "System";
+}
+.font-customer{
+	  -fx-font: bold  9pt "System";
+}
+.font-toPay{
+	  -fx-font: bold 12pt "Arial";
+}
+.line-equal{
+	-fx-border-color: black;
+	-fx-border-width: 1 0 0 0;
+}
+
+.button-pay{
+	-fx-font: bold 16px "Serif";
+	-fx-text-fill: white;
+    -fx-padding: 10;
+    -fx-background-color: #023358;
+}
+
+.button-product{
+	-fx-font: bold 8pt "Arial";
+	-fx-text-fill: #000000;
+    -fx-padding: 10;
+}
+
+

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" fx:id="customerLayout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#forCustomerSubmit" prefHeight="650.0" prefWidth="600.0" stylesheets="@../assets/css/main.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ModalController">
+    <children>
+        <Pane layoutX="15.0" layoutY="57.0" prefHeight="200.0" prefWidth="570.0" styleClass="pane-fields" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="60.0" />
+        <Pane layoutX="15.0" layoutY="296.0" prefHeight="397.0" prefWidth="570.0" styleClass="pane-fieldsBelow" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="295.0">
+         <children>
+              <Button fx:id="btnSubmit" layoutX="252.0" layoutY="276.0" mnemonicParsing="false" onMouseClicked="#forCustomerSubmitBtn" prefHeight="50.0" prefWidth="80.0" styleClass="customer-submit" text="Submit" />
+         </children></Pane>
+        <Label layoutX="23.0" layoutY="37.0" styleClass="customer-default" stylesheets="@../assets/css/main.css" text="Personal Information" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="35.0" />
+        <HBox layoutX="58.0" layoutY="79.0" spacing="30.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="100.0">
+            <children>
+                <TextField fx:id="txtFirstname" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onKeyReleased="#formCustomerFirstname" prefHeight="25.0" prefWidth="200.0" promptText="Firstname" styleClass="border-fields" HBox.hgrow="ALWAYS" />
+                <TextField fx:id="txtMI" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onKeyReleased="#formCustomerMI" prefHeight="25.0" prefWidth="40.0" promptText="M.I" styleClass="border-fields" HBox.hgrow="ALWAYS" />
+                <TextField fx:id="txtLastname" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onKeyReleased="#formCustomerLastname" prefHeight="25.0" prefWidth="200.0" promptText="Lastname" styleClass="border-fields" HBox.hgrow="ALWAYS" />
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" layoutX="68.0" layoutY="109.0" prefHeight="14.0" prefWidth="442.0" spacing="30.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="130.0">
+            <children>
+                <Label fx:id="lblFirstname" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="200.0" styleClass="customer-label" stylesheets="@../assets/css/main.css" text="Firstname" HBox.hgrow="ALWAYS" />
+                <Label fx:id="lblMI" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="14.0" prefWidth="40.0" styleClass="customer-label" stylesheets="@../assets/css/main.css" text="M.I" HBox.hgrow="ALWAYS" />
+                <Label fx:id="lblLastname" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="200.0" styleClass="customer-label" stylesheets="@../assets/css/main.css" text="Lastname" HBox.hgrow="ALWAYS" />
+            </children>
+        </HBox>
+        <Label layoutX="38.0" layoutY="134.0" styleClass="customer-font" stylesheets="@../assets/css/main.css" text="Gender" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="160.0" />
+        <RadioButton fx:id="radioMale" layoutX="68.0" layoutY="149.0" mnemonicParsing="false" onMouseClicked="#forRadio" styleClass="customer-font" stylesheets="@../assets/css/main.css" text="Male" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="180.0">
+            <toggleGroup>
+                <ToggleGroup fx:id="groupGender" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="radioFemale" layoutX="68.0" layoutY="169.0" mnemonicParsing="false" onMouseClicked="#forRadio" styleClass="customer-font" stylesheets="@../assets/css/main.css" text="Female" toggleGroup="$groupGender" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="200.0" />
+        <Label layoutX="20.0" layoutY="272.0" styleClass="customer-default" stylesheets="@../assets/css/main.css" text="Contact Information" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="270.0" />
+        <HBox layoutX="40.0" layoutY="282.0" spacing="5.0" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="330.0" />
+        <TextField fx:id="txtAddressStreet" layoutX="55.0" layoutY="300.0" onKeyReleased="#forCustomerAddressStreet" prefHeight="27.0" prefWidth="330.0" promptText="Street, road, blk. no." styleClass="text-fields" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="310.0" />
+        <TextField fx:id="txtBarangay" layoutX="293.0" layoutY="307.0" onKeyReleased="#forCustomerAddressBarangay" onMouseClicked="#setTxtAddress" prefHeight="27.0" prefWidth="165.0" promptText="Barangay" styleClass="text-fields" AnchorPane.leftAnchor="410.0" AnchorPane.topAnchor="310.0" />
+        <TextField fx:id="txtCityMunicipality" layoutX="176.0" layoutY="283.0" onKeyReleased="#forCustomerAddressCityMunicipality" onMouseClicked="#setTxtAddress" prefHeight="27.0" prefWidth="144.0" promptText="City / Municipality" styleClass="text-fields" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="355.0" />
+        <TextField fx:id="txtProvince" layoutX="80.0" layoutY="365.0" onKeyReleased="#forCustomerAddressProvince" onMouseClicked="#setTxtAddress" prefHeight="27.0" prefWidth="154.0" promptText="Province" styleClass="text-fields" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="355.0" />
+        <TextField fx:id="txtCountry" layoutX="240.0" layoutY="365.0" onKeyReleased="#forCustomerAddressCountry" onMouseClicked="#setTxtAddress" prefHeight="27.0" prefWidth="178.0" promptText="Country" styleClass="text-fields" AnchorPane.leftAnchor="397.0" AnchorPane.topAnchor="355.0" />
+        <Label layoutX="50.0" layoutY="170.0" styleClass="customer-font" stylesheets="@../assets/css/main.css" text="Address" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="295.0" />
+        <Label fx:id="lblAddressStreet" layoutX="58.0" layoutY="323.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="200.0" styleClass="customer-label" stylesheets="@../assets/css/main.css" text="Street, road, blk. no." AnchorPane.leftAnchor="175.0" AnchorPane.topAnchor="335.0" />
+        <Label layoutX="185.0" layoutY="345.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="15.0" styleClass="customer-label" stylesheets="@../assets/css/main.css" text="," AnchorPane.leftAnchor="402.0" AnchorPane.topAnchor="320.0" />
+        <Label fx:id="lblBarangay" layoutX="185.0" layoutY="345.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="65.0" styleClass="customer-label" stylesheets="@../assets/css/main.css" text="Barangay" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="335.0" />
+        <Label fx:id="lblCityMunicipality" layoutX="480.0" layoutY="345.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="90.0" styleClass="customer-label" stylesheets="@../assets/css/main.css" text="City / Municipality" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="380.0" />
+        <Label layoutX="412.0" layoutY="330.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="15.0" styleClass="customer-label" stylesheets="@../assets/css/main.css" text="," AnchorPane.leftAnchor="219.0" AnchorPane.topAnchor="365.0" />
+        <Label layoutX="229.0" layoutY="375.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="15.0" styleClass="customer-label" stylesheets="@../assets/css/main.css" text="," AnchorPane.leftAnchor="389.0" AnchorPane.topAnchor="365.0" />
+        <Label fx:id="lblProvince" layoutX="120.0" layoutY="390.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onKeyReleased="#forCustomerAddressProvince" prefHeight="25.0" prefWidth="65.0" styleClass="customer-label" stylesheets="@../assets/css/main.css" text="Province" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="380.0" />
+        <Label fx:id="lblCountry" layoutX="290.0" layoutY="390.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onKeyReleased="#forCustomerAddressCountry" prefHeight="25.0" prefWidth="65.0" styleClass="customer-label" stylesheets="@../assets/css/main.css" text="Country" AnchorPane.leftAnchor="465.0" AnchorPane.topAnchor="380.0" />
+        <Label layoutX="50.0" layoutY="305.0" styleClass="customer-font" stylesheets="@../assets/css/main.css" text="Contact number" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="430.0" />
+        <TextField fx:id="txtCellphoneNumber" layoutX="80.0" layoutY="320.0" onKeyReleased="#forCustomerCellphone" prefHeight="27.0" prefWidth="199.0" promptText="Cellphone number" styleClass="text-fields" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="450.0" />
+        <Label fx:id="lblCellphoneNumber" layoutX="120.0" layoutY="390.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="90.0" styleClass="customer-label" stylesheets="@../assets/css/main.css" text="Cellphone number" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="475.0" />
+        <TextField fx:id="txtLandline" layoutX="80.0" layoutY="460.0" onKeyReleased="#forCustomerLandline" prefHeight="27.0" prefWidth="199.0" promptText="Landline" styleClass="text-fields" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="500.0" />
+        <Label fx:id="lblLandline" layoutX="130.0" layoutY="485.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="90.0" styleClass="customer-label" stylesheets="@../assets/css/main.css" text="Landline" AnchorPane.leftAnchor="135.0" AnchorPane.topAnchor="525.0" />
+    </children>
+</AnchorPane>

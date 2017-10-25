@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" onKeyReleased="#setViewClose" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #ffffff;" styleClass="mainFxmlClass" stylesheets="@../assets/css/accountsdashboard.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddAccountController">
+   <children>
+      <Label fx:id="lblTitle" layoutX="14.0" layoutY="14.0" text="Add account">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/User%20Credentials-32.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <TextField fx:id="txtFirstname" layoutX="95.5" layoutY="109.0" onKeyReleased="#firstname" prefHeight="25.0" prefWidth="100.0" promptText="Firstname" AnchorPane.leftAnchor="94.0" AnchorPane.rightAnchor="210.0" />
+      <TextField fx:id="txtMI" layoutX="195.0" layoutY="109.0" onKeyReleased="#mi" prefWidth="50.0" promptText="M.I" />
+      <TextField fx:id="txtLastname" layoutX="249.0" layoutY="109.0" onKeyReleased="#lastname" prefHeight="25.0" prefWidth="100.0" promptText="Lastname" />
+      <TextField fx:id="txtStreet" layoutX="93.0" layoutY="152.0" onKeyReleased="#street" prefHeight="25.0" prefWidth="145.0" promptText="road, street blk no." AnchorPane.leftAnchor="93.0" />
+      <TextField fx:id="txtBarangay" layoutX="245.0" layoutY="152.0" onKeyReleased="#barangay" prefHeight="25.0" prefWidth="113.0" promptText="Barangay" AnchorPane.leftAnchor="245.0" AnchorPane.rightAnchor="48.0" />
+      <TextField fx:id="txtCity" layoutX="93.0" layoutY="198.0" onKeyReleased="#city" prefHeight="25.0" prefWidth="123.0" promptText="City" AnchorPane.leftAnchor="93.0" />
+      <TextField fx:id="txtProvince" layoutX="220.0" layoutY="197.0" onKeyReleased="#province" prefHeight="25.0" prefWidth="132.0" promptText="Province" AnchorPane.rightAnchor="48.0" />
+      <Label layoutX="30.0" layoutY="77.0" styleClass="double-underline" stylesheets="@../assets/css/printing.css" text="User Information     " AnchorPane.leftAnchor="30.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="113.0" text="Name:" AnchorPane.leftAnchor="40.0" />
+      <Label layoutX="43.0" layoutY="156.0" text="Address:" AnchorPane.leftAnchor="43.0" />
+      <Label fx:id="lblStreet" layoutX="91.0" layoutY="177.0" text="Street">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBarangay" layoutX="245.0" layoutY="177.0" text="Barangay" AnchorPane.leftAnchor="245.0">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCity" layoutX="91.0" layoutY="223.0" text="City">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblProvince" layoutX="220.0" layoutY="222.0" text="Province">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="236.0" text="Gender:" AnchorPane.leftAnchor="40.0" />
+      <RadioButton fx:id="radioMale" layoutX="90.0" layoutY="253.0" mnemonicParsing="false" onAction="#gender" text="Male" AnchorPane.leftAnchor="90.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="groupGender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radioFemale" layoutX="90.0" layoutY="276.0" mnemonicParsing="false" onAction="#gender" text="Female" toggleGroup="$groupGender" AnchorPane.leftAnchor="90.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </RadioButton>
+      <TextField fx:id="txtContact" layoutX="90.0" layoutY="304.0" onKeyReleased="#contact" prefHeight="25.0" prefWidth="173.0" promptText="0999 999 9999" AnchorPane.leftAnchor="90.0" />
+      <ComboBox fx:id="cmbAccountType" layoutX="134.0" layoutY="363.0" prefHeight="25.0" prefWidth="173.0" promptText="Cashier" style="-fx-background-color: #ffffff;" />
+      <TextField fx:id="txtUsername" layoutX="135.0" layoutY="394.0" onKeyReleased="#username" prefHeight="25.0" prefWidth="173.0" promptText="Username" AnchorPane.leftAnchor="135.0" />
+      <PasswordField fx:id="txtPassword" layoutX="135.0" layoutY="423.0" onKeyReleased="#password" prefHeight="25.0" prefWidth="173.0" promptText="Password" AnchorPane.leftAnchor="135.0" />
+      <Label layoutX="40.0" layoutY="308.0" text="Contact" AnchorPane.leftAnchor="40.0" />
+      <Label layoutX="30.0" layoutY="339.0" styleClass="double-underline" stylesheets="@../assets/css/printing.css" text="AccountInformation     " AnchorPane.leftAnchor="30.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="394.0" text="Username:" AnchorPane.leftAnchor="40.0" />
+      <Label layoutX="40.0" layoutY="427.0" text="Password:" />
+      <Label layoutX="40.0" layoutY="367.0" text="Account type:" />
+      <ComboBox fx:id="cmbAccountStatus" layoutX="125.0" layoutY="41.0" prefWidth="150.0" promptText="Activate" style="-fx-background-color: #ffffff;" />
+      <Button fx:id="btnSave" layoutX="249.0" layoutY="460.0" mnemonicParsing="false" onMouseClicked="#submit" prefWidth="60.0" styleClass="button-save" text="Submit" />
+      <Button layoutX="314.0" layoutY="460.0" mnemonicParsing="false" onMouseClicked="#setViewCloseClick" prefWidth="60.0" styleClass="button-cancel" text="Cancel" />
+      <ImageView fitHeight="19.0" fitWidth="23.0" layoutX="354.0" layoutY="5.0" onMouseClicked="#setViewCloseClick" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <image>
+            <Image url="@../assets/images/Delete.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblFirstname" layoutX="98.0" layoutY="134.0" text="Firstname">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMI" layoutX="211.0" layoutY="134.0" text="M.I">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblLastname" layoutX="250.0" layoutY="134.0" text="Lastname">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblGender" layoutX="88.0" layoutY="237.0" prefHeight="15.0" prefWidth="25.0" text="*">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblContact" layoutX="267.0" layoutY="301.0" prefHeight="15.0" prefWidth="25.0" text="*">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUsername" layoutX="314.0" layoutY="404.0" prefHeight="15.0" prefWidth="82.0">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

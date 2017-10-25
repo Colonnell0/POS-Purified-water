@@ -1,0 +1,52 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+	
+}
+.login-label{
+
+}
+.login-background{
+    -fx-background-color: 	#ecf0f1;
+	-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+.login-back{
+	-fx-background-color: #498bbf;
+
+}
+.login-header{
+	-fx-font: bold 15pt "Arial";
+	-fx-text-fill: #81807c;
+}
+
+.separator *.line {
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 2 0; /* its make really one-pixel-border */
+    -fx-border-color: #81807c;
+}
+
+.botton-sign{
+
+    -fx-background-color: 	#498bbf;
+	-fx-font: bold  10pt "Arial";
+	-fx-text-fill: #ffffff;
+
+		
+}
+.text-fields{
+	 -fx-background-color: 	#616161;
+	 -fx-font: italic 10pt "Arial";
+	 -fx-text-fill: #ffffff;
+}
+.pane-back{
+	
+   -fx-background-color: #3c3c3c;
+   -fx-border-radius: 3 0 0 3;
+   -fx-background-radius: 3 0 0 3;
+}
+.label-input{
+	-fx-font: italic 8pt "Arial";
+}
+

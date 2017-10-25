@@ -1,0 +1,30 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.font-menu{
+	-fx-font:   7pt "Arial";
+}
+.custom-dashed-border {
+    -fx-border-color: #000000 ;
+    -fx-border-width: 1 ; 
+    -fx-border-style: segments(2, 5, 5, 5)  line-cap round ;
+}
+.border {
+    -fx-border-color: #000000 ;
+    -fx-border-width: 1 ;
+}
+.double-underline {
+    -fx-border-color: black, transparent, black;
+    -fx-border-width: 0 0 1 0, 0 0 1 0, 0 0 1 0;
+    -fx-border-insets: 0 0 1 0, 0 0 2 0, 0 0 3 0;
+}
+
+.separator *.line {
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 1 0; /* its make really one-pixel-border */
+    -fx-border-color: black;
+}

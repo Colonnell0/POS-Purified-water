@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="mainFxmlClass" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CustomerDashbaordController">
+    <stylesheets>
+        <URL value="@/assets/css/findcustomer.css" />
+    </stylesheets>
+   <children>
+      <BorderPane prefHeight="635.0" prefWidth="900.0" stylesheets="@../assets/css/findcustomer.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="37.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="txtCustomer" layoutY="103.0" onKeyReleased="#findCustomerForPOS" prefHeight="20.0" prefWidth="785.0" styleClass="txt-search" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="90.0" />
+                  <Button layoutX="706.0" layoutY="6.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="129.0" styleClass="button-search" text="Search" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="90.0">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/images/search.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label prefHeight="41.0" prefWidth="170.0" styleClass="font-header" text="Customer" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="0.0">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/images/direct-customer.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Button alignment="TOP_LEFT" layoutX="30.0" layoutY="53.0" mnemonicParsing="false" onAction="#addCustomer" prefHeight="25.0" prefWidth="123.0" text="Add customer" AnchorPane.leftAnchor="30.0">
+                     <graphic>
+                        <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/images/add-plus-button.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <ComboBox fx:id="cmbAccount" layoutX="170.0" layoutY="53.0" onAction="#setAccounts" prefHeight="26.0" prefWidth="312.0" style="-fx-background-color: #ffffff;" styleClass="lbl-account" />
+               </children>
+               <BorderPane.margin>
+                  <Insets top="25.0" />
+               </BorderPane.margin>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane nodeOrientation="LEFT_TO_RIGHT" BorderPane.alignment="CENTER">
+               <children>
+                  <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                    <tabs>
+                      <Tab text="Customer information">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tblCustomer" nodeOrientation="LEFT_TO_RIGHT" styleClass="table-customer" stylesheets="@../assets/css/findcustomer.css" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+                                      <columns>
+                                        <TableColumn fx:id="tblCCustomerID" maxWidth="100.0" prefWidth="30.0" text="ID" />
+                                        <TableColumn fx:id="tblCCustomerName" maxWidth="500.0" minWidth="100.0" prefWidth="154.99993896484375" text="Name of Customer" />
+                                          <TableColumn fx:id="tblCCustomerGender" prefWidth="47.0" text="Gender" />
+                                          <TableColumn prefWidth="183.0" text="Contact Number">
+                                             <columns>
+                                                <TableColumn fx:id="tblCCustomerCellphoneNum" maxWidth="200.0" prefWidth="88.00003051757812" text="Cellphone no." />
+                                                <TableColumn fx:id="tblCCustomerLandlineNum" maxWidth="100.0" prefWidth="66.0" text="Landline" />
+                                             </columns>
+                                          </TableColumn>
+                                          <TableColumn prefWidth="299.0000305175781" text="Address">
+                                             <columns>
+                                                <TableColumn fx:id="tblCCustomerAddressStreet" maxWidth="200.0" minWidth="40.0" prefWidth="80.00003051757812" text="Street" />
+                                                <TableColumn fx:id="tblCCustomerAddressBarangay" maxWidth="200.0" minWidth="40.0" prefWidth="77.0" text="Barangay" />
+                                                <TableColumn fx:id="tblCCustomerAddressCityMunicipality" maxWidth="200.0" minWidth="7.0" prefWidth="62.0" text="City" />
+                                                <TableColumn fx:id="tblCCustomerAddressProvince" maxWidth="200.0" minWidth="8.0" prefWidth="53.0" text="Province" />
+                                                <TableColumn fx:id="tblCCustomerAddressCountry" prefWidth="58.0" text="Country" />
+                                             </columns>
+                                          </TableColumn>
+                                          <TableColumn prefWidth="514.0" text="Transaction">
+                                             <columns>
+                                                <TableColumn prefWidth="128.0" text="Borrowed">
+                                                   <columns>
+                                                      <TableColumn fx:id="tblCCustomerBorrowedRound" maxWidth="100.0" prefWidth="52.0" text="Round" />
+                                                      <TableColumn fx:id="tblCCustomerBorrowedSlim" maxWidth="100.0" prefWidth="48.0" text="Slim" />
+                                                   </columns>
+                                                </TableColumn>
+                                                <TableColumn prefWidth="72.0" text="Returned">
+                                                   <columns>
+                                                      <TableColumn fx:id="tblCCustomerReturnedRound" maxWidth="100.0" prefWidth="50.0" text="Round" />
+                                                      <TableColumn fx:id="tblCCustomerReturnedSlim" maxWidth="100.0" prefWidth="50.0" text="Slim" />
+                                                   </columns>
+                                                </TableColumn>
+                                                <TableColumn prefWidth="107.0" text="Remaining">
+                                                   <columns>
+                                                      <TableColumn fx:id="tblCCustomerRemainingRound" prefWidth="59.0" text="Round" />
+                                                      <TableColumn fx:id="tblCCustomerRemainingSlim" prefWidth="66.0" text="Slim" />
+                                                   </columns>
+                                                </TableColumn>
+                                                <TableColumn fx:id="tblCCustomerOthers" prefWidth="62.0" text="Others" />
+                                                <TableColumn fx:id="tblCCustomerTotal" maxWidth="72.0" prefWidth="75.0" text="Total" />
+                                                <TableColumn fx:id="tblCCustomerAmount" prefWidth="75.0" text="Amount" />
+                                                <TableColumn fx:id="tblCCustomerBalance" prefWidth="75.0" text="Balance" />
+                                             </columns>
+                                          </TableColumn>
+                                          <TableColumn fx:id="tblCCustomerDate" maxWidth="234.0" prefWidth="100.0" text="Date" />
+                                          <TableColumn fx:id="tblCCustomerRemarks" maxWidth="500.0" minWidth="84.0" prefWidth="201.0" text="Remarks" />
+                                          <TableColumn prefWidth="75.0" text="Action">
+                                             <columns>
+                                                <TableColumn fx:id="edit" prefWidth="40.0" style="-fx-alignment: center; -fx-text-fill: #4CAF50;" />
+                                                <TableColumn fx:id="addDiscount" prefWidth="100.0" style="-fx-alignment: center; -fx-text-fill: #03A9F4;" />
+                                                <TableColumn fx:id="delete" prefWidth="50.0" style="-fx-alignment: center; -fx-text-fill: #F44336;" />
+                                             </columns>
+                                          </TableColumn>
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Customer Discounted">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tblDiscount" nodeOrientation="LEFT_TO_RIGHT" styleClass="table-customer" stylesheets="@../assets/css/findcustomer.css" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+                                       <columns>
+                                          <TableColumn fx:id="tblCDiscountID" maxWidth="100.0" prefWidth="30.0" text="ID" />
+                                          <TableColumn fx:id="tblCDiscountCustomerName" maxWidth="500.0" minWidth="100.0" prefWidth="154.99993896484375" text="Name of Customer" />
+                                          <TableColumn fx:id="tblCDiscountGender" prefWidth="47.0" text="Gender" />
+                                          <TableColumn prefWidth="183.0" text="Contact Number">
+                                             <columns>
+                                                <TableColumn fx:id="tblCDiscountCellphone" maxWidth="200.0" prefWidth="88.00003051757812" text="Cellphone no." />
+                                                <TableColumn fx:id="tblCDiscountLandline" maxWidth="100.0" prefWidth="66.0" text="Landline" />
+                                             </columns>
+                                          </TableColumn>
+                                          <TableColumn prefWidth="299.0000305175781" text="Address">
+                                             <columns>
+                                                <TableColumn fx:id="tblCDiscountStreet" maxWidth="200.0" minWidth="40.0" prefWidth="80.00003051757812" text="Street" />
+                                                <TableColumn fx:id="tblCDiscountBarangay" maxWidth="200.0" minWidth="40.0" prefWidth="77.0" text="Barangay" />
+                                                <TableColumn fx:id="tblCDiscountCity" maxWidth="200.0" minWidth="7.0" prefWidth="62.0" text="City" />
+                                                <TableColumn fx:id="tblCDiscountProvince" maxWidth="200.0" minWidth="8.0" prefWidth="53.0" text="Province" />
+                                                <TableColumn fx:id="tblCDiscountCountry" prefWidth="58.0" text="Country" />
+                                             </columns>
+                                          </TableColumn>
+                                          <TableColumn prefWidth="75.0" text="Discount">
+                                             <columns>
+                                                <TableColumn fx:id="tblCDiscountProduct" prefWidth="150.0" text="Product" />
+                                                <TableColumn fx:id="tblCDiscountNumberOfProduct" prefWidth="100.0" text="# of Product" />
+                                                <TableColumn fx:id="tblCDiscountDiscount" prefWidth="100.0" text="Discount:  ( ₱ )" />
+                                             </columns>
+                                          </TableColumn>
+                                          <TableColumn fx:id="tblCDiscountDate" maxWidth="234.0" prefWidth="100.0" text="Date" />
+                                          <TableColumn prefWidth="75.0" text="Action">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="tblCDiscountEdit" prefWidth="40.0" style="-fx-alignment: center; -fx-text-fill: #4CAF50;" />
+                                                      <TableColumn fx:id="tblCDiscountDelete" prefWidth="100.0" style="-fx-alignment: center; -fx-text-fill: #F44336;" />
+                                                   </columns>
+                                                </TableColumn>
+                                             </columns>
+                                          </TableColumn>
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+                
+            </AnchorPane>
+         </center>
+         <bottom>
+            <AnchorPane prefHeight="40.0" prefWidth="1000.0" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

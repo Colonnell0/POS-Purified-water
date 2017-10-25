@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" onKeyReleased="#setViewClose" onMouseEntered="#trigger" prefHeight="500.0" prefWidth="600.0" styleClass="mainFxmlClass" stylesheets="@../assets/css/modal.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PAYController">
+   <children>
+      <TextField fx:id="txtRound" layoutX="84.0" layoutY="385.0" onKeyPressed="#submitEnter" prefHeight="32.0" prefWidth="206.0">
+         <styleClass>
+            <String fx:value="textfields-item" />
+            <String fx:value="font-item" />
+         </styleClass></TextField>
+      <TextField fx:id="txtSlim" layoutX="84.0" layoutY="422.0" onKeyPressed="#submitEnter" prefHeight="32.0" prefWidth="206.0">
+         <styleClass>
+            <String fx:value="textfields-item" />
+            <String fx:value="font-item" />
+         </styleClass></TextField>
+      <Pane layoutX="296.0" layoutY="27.0" prefHeight="405.0" prefWidth="290.0" styleClass="mainFxmlClass" AnchorPane.bottomAnchor="27.0" AnchorPane.topAnchor="27.0">
+         <children>
+            <Button layoutX="55.0" layoutY="366.0" mnemonicParsing="false" onMouseClicked="#submitClick" prefHeight="62.0" prefWidth="180.0" styleClass="button-pay" text="SUBMIT" />
+            <Pane layoutX="122.0" layoutY="1.0" prefHeight="20.0" prefWidth="47.0" styleClass="mainFxmlClass" />
+            <Pane layoutX="10.0" layoutY="9.0" prefHeight="332.0" prefWidth="270.0" styleClass="mainFxmlClass">
+               <children>
+                  <Label layoutX="14.0" layoutY="216.0" prefHeight="23.0" prefWidth="185.0" styleClass="font-header" text="ENTER AMOUNT:" />
+                  <TextField fx:id="txtAmount" layoutX="26.0" layoutY="242.0" onKeyPressed="#submitEnter" prefHeight="48.0" prefWidth="219.0" promptText="PHP AMOUNT">
+                     <styleClass>
+                        <String fx:value="textfields-item" />
+                        <String fx:value="font-subheader" />
+                     </styleClass>
+                  </TextField>
+                  <TextArea fx:id="displayAllprice" editable="false" layoutX="13.0" layoutY="14.0" prefHeight="194.0" prefWidth="243.0" wrapText="true" />
+               </children></Pane>
+         </children>
+      </Pane>
+      <Label layoutX="14.0" layoutY="29.0" prefHeight="17.0" prefWidth="165.0" styleClass="font-header" text="Customer Details" />
+      <Label layoutX="14.0" layoutY="64.0" styleClass="font-subheader" text="Name:" />
+      <Label fx:id="lblName" layoutX="32.0" layoutY="84.0" prefHeight="32.0" prefWidth="253.0" styleClass="font-subheader" wrapText="true" />
+      <Label layoutX="14.0" layoutY="123.0" styleClass="font-subheader" text="Address:" />
+      <Label fx:id="lblAddress" layoutX="32.0" layoutY="143.0" prefHeight="32.0" prefWidth="253.0" styleClass="font-subheader" wrapText="true" />
+      <Label layoutX="18.0" layoutY="218.0" styleClass="font-header" text="Transaction Details" />
+      <Separator layoutX="18.0" layoutY="190.0" prefHeight="3.0" prefWidth="262.0" />
+      <Label layoutX="14.0" layoutY="250.0" styleClass="font-subheader" text="Borrowed:" />
+      <Label layoutX="49.0" layoutY="280.0" styleClass="font-item" text="ROUND" />
+      <Label layoutX="144.0" layoutY="280.0" styleClass="font-item" text="SLIM" />
+      <Label fx:id="lblRound" alignment="CENTER" contentDisplay="CENTER" layoutX="49.0" layoutY="306.0" prefHeight="17.0" prefWidth="54.0" styleClass="font-item" />
+      <Label fx:id="lblSlim" alignment="CENTER" contentDisplay="CENTER" layoutX="146.0" layoutY="306.0" prefHeight="17.0" prefWidth="36.0" styleClass="font-item" />
+      <Label layoutX="14.0" layoutY="357.0" styleClass="font-subheader" text="Return:" />
+      <Label layoutX="22.0" layoutY="393.0" styleClass="font-item" text="ROUND" />
+      <Label layoutX="21.0" layoutY="429.0" styleClass="font-item" text="SLIM" />
+   </children>
+</AnchorPane>

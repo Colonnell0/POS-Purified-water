@@ -1,0 +1,53 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.button-search{
+	-fx-background-radius:5em;
+	-fx-border-width:2px;
+	-fx-border-radius:5em ;
+	-fx-border-color:#023358;
+    -fx-font: bold  8pt "Arial";
+}
+.txt-search{
+	-fx-background-radius:5em;
+	-fx-border-width:2px;
+	-fx-border-radius:5em ;
+	-fx-border-color:#023358;
+}
+.table-customer{
+	-fx-border-width:2px;
+	-fx-border-color:#023358;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected, .combo-box-popup .list-view .list-cell:filled:selected:hover 
+{
+    -fx-background: -fx-accent;
+    -fx-background-color: -fx-selection-bar;
+    -fx-text-fill: -fx-selection-bar-text;
+}
+
+
+.toggle-button:selected {
+   -fx-border-color:#696969;
+}
+.font-header{
+	-fx-font: bold  11pt "Arial";
+}
+.table-view .table-cell{
+  
+    -fx-font-size:12px;         
+
+}
+.table-view .column-header-background .label{
+    -fx-font-weight:bold;
+    -fx-font-size:12px;       
+    
+}
+.lbl-account{
+	 -fx-font: bold  10pt "Arial";
+}
+

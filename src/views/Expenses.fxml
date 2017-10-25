@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane id="AnchorPane" onKeyReleased="#escHandler" onMouseMoved="#setData" prefHeight="660.0" prefWidth="800.0" stylesheets="@../assets/css/collectioncollectibles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ExpensesController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="20.0">
+         <top>
+            <AnchorPane prefHeight="360.0" prefWidth="750.0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" BorderPane.alignment="TOP_LEFT">
+               <children>
+                  <Label styleClass="font-header" text="Expenses">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/images/collection.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label layoutX="56.0" layoutY="48.0" styleClass="font-header" text="Received by" AnchorPane.leftAnchor="50.0" />
+                  <TextField fx:id="txtReceived" layoutX="56.0" layoutY="67.0" prefHeight="30.0" prefWidth="300.0" promptText="name" styleClass="font-sub" AnchorPane.leftAnchor="50.0" />
+                  <Label layoutX="384.0" layoutY="45.0" styleClass="font-header" text="Cashier name" />
+                  <TextField fx:id="txtCashierName" editable="false" layoutX="384.0" layoutY="66.0" prefHeight="30.0" prefWidth="311.0" styleClass="font-sub" AnchorPane.rightAnchor="60.0" />
+                  <DatePicker fx:id="dateDate" layoutX="58.0" layoutY="131.0" prefHeight="30.0" prefWidth="223.0" styleClass="font-sub" AnchorPane.leftAnchor="50.0" />
+                  <Label layoutX="56.0" layoutY="113.0" styleClass="font-header" text="Date" AnchorPane.leftAnchor="50.0" />
+                  <Label layoutX="309.0" layoutY="112.0" styleClass="font-header" text="Expense" />
+                  <TextField fx:id="txtExpenses" layoutX="309.0" layoutY="131.0" prefHeight="30.0" prefWidth="172.0" promptText="expense" styleClass="font-sub" />
+                  <Label layoutX="506.0" layoutY="112.0" styleClass="font-header" text="Amount" />
+                  <TextField fx:id="txtAmount" layoutX="506.0" layoutY="131.0" prefHeight="30.0" prefWidth="183.0" promptText="Php amount" styleClass="font-sub" AnchorPane.rightAnchor="60.0" />
+                  <TextArea fx:id="txtANote" layoutX="50.0" layoutY="200.0" prefHeight="141.0" prefWidth="642.0" promptText="Description for expense entry." styleClass="font-sub" wrapText="true" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="60.0" />
+                  <Label layoutX="50.0" layoutY="179.0" styleClass="font-header" text="Note" AnchorPane.leftAnchor="50.0" />
+                  <Button layoutX="534.0" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#saveExpense" prefHeight="25.0" prefWidth="74.0" text="Save">
+                     <graphic>
+                        <ImageView fitHeight="13.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/images/Save.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="customer-label" />
+                        <String fx:value="button-save" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="616.0" mnemonicParsing="false" onMouseClicked="#cancelExpense" prefHeight="25.0" prefWidth="74.0" text="Cancel">
+                     <graphic>
+                        <ImageView fitHeight="13.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/images/Cancel.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="customer-label" />
+                        <String fx:value="button-cancel" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="tblExpenses" prefHeight="200.0" prefWidth="700.0" styleClass="table-customer" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0">
+                    <columns>
+                      <TableColumn fx:id="tbcExpensesID" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="tbcExpenses" prefWidth="109.0" text="Expenses" />
+                        <TableColumn fx:id="tbcAmount" prefWidth="69.0" text="Amount" />
+                        <TableColumn fx:id="tbcCashierName" prefWidth="123.0" text="Cashier name" />
+                        <TableColumn fx:id="tbcReceived" prefWidth="114.0" text="Received" />
+                        <TableColumn fx:id="tbcDate" prefWidth="85.0" text="Date" />
+                        <TableColumn fx:id="tbcNote" prefWidth="250.0" text="Note" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+      <Button layoutX="547.0" layoutY="-25.0" mnemonicParsing="false" text="Button" />
+   </children>
+</AnchorPane>

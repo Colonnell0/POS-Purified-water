@@ -1,0 +1,52 @@
+.mainFxmlClass {
+    -fx-background-radius:0.5em;
+	-fx-border-width:2px;
+	-fx-border-radius:0.5em ;
+	-fx-border-color:#023358;
+}
+.font-header{
+    -fx-font: bold  20px "Arial";
+}
+.font-change{
+    -fx-font: bold  30px "Arial";
+}
+.font-change-sub{
+    -fx-font: bold  30px "Arial";
+}
+
+
+.font-subheader{
+    -fx-font: Italic bold  12pt "Arial";
+
+}
+.font-item{
+    -fx-font: Italic bold  11pt "Arial";
+
+}
+
+.textfields-item{
+	-fx-background-radius:0.5em;
+	-fx-border-width:2px;
+	-fx-border-radius:0.5em ;
+	-fx-border-color:#023358;
+}
+
+.button-pay{
+    -fx-font: bold 16px "Serif";
+	-fx-text-fill: white;
+    -fx-background-color: #023358;
+}
+.background{
+	-fx-opacity: 0.5;
+}
+.button-save{
+	
+   -fx-text-fill: #D3D3D3;
+   -fx-background-color: #3B5998;
+	
+}
+.button-cancel{
+	  -fx-text-fill: #D3D3D3;
+   -fx-background-color: #006600;
+	
+}

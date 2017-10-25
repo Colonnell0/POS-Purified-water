@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane id="AnchorPane" onKeyReleased="#escHandler" onMouseMoved="#getCustomer" prefHeight="800.0" prefWidth="1200.0" stylesheets="@../assets/css/collectioncollectibles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DeliveryController">
+   <children>
+      <BorderPane prefHeight="700.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TableView fx:id="tblDelivery" onMouseMoved="#getCustomer" prefHeight="675.0" prefWidth="701.0" styleClass="table-customer" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="transaction_id" prefWidth="36.0" text="ID" />
+                <TableColumn fx:id="customerName" prefWidth="149.0" text="Customer Name" />
+                  <TableColumn fx:id="address" prefWidth="124.0" text="Address" />
+                  <TableColumn prefWidth="75.0" text="Contact number">
+                     <columns>
+                        <TableColumn fx:id="cellphone" prefWidth="75.0" text="Cellphone" />
+                        <TableColumn fx:id="landline" prefWidth="75.0" text="Landline" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn prefWidth="251.0" text="Transaction">
+                     <columns>
+                        <TableColumn fx:id="productName" prefWidth="88.0" text="Product name" />
+                        <TableColumn fx:id="quantity" prefWidth="62.0" text="Quantity" />
+                        <TableColumn fx:id="total" prefWidth="75.0" text="Total" />
+                        <TableColumn fx:id="amount" prefWidth="75.0" text="Amount" />
+                        <TableColumn fx:id="balance" prefWidth="75.0" text="Balance" />
+                        <TableColumn fx:id="change" prefWidth="75.0" text="Change" />
+                        <TableColumn prefWidth="75.0" text="Return">
+                           <columns>
+                              <TableColumn fx:id="returnRound" prefWidth="66.0" text="Round" />
+                              <TableColumn fx:id="returnSlim" prefWidth="71.0" text="Slim" />
+                           </columns>
+                        </TableColumn>
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="date" prefWidth="85.0" text="Date" />
+                  <TableColumn fx:id="remarks" prefWidth="200.0" text="Remarks" />
+              </columns>
+               <BorderPane.margin>
+                  <Insets bottom="25.0" left="25.0" right="25.0" top="30.0" />
+               </BorderPane.margin>
+            </TableView>
+         </center>
+         <right>
+            <AnchorPane prefHeight="598.0" prefWidth="361.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="25.0" right="25.0" top="30.0" />
+               </BorderPane.margin>
+               <children>
+                  <Label layoutX="23.0" layoutY="6.0" styleClass="font-header" stylesheets="@../assets/css/collectioncollectibles.css" text="Customer Details" />
+                  <Separator layoutX="138.0" layoutY="13.0" prefHeight="3.0" prefWidth="164.0" AnchorPane.leftAnchor="145.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="15.0" />
+                  <Separator layoutX="144.0" layoutY="65.0" prefHeight="2.0" prefWidth="20.0" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="15.0" />
+                  <Separator layoutX="20.0" layoutY="15.0" orientation="VERTICAL" prefHeight="326.0" prefWidth="4.0" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="15.0" />
+                  <Label layoutX="23.0" layoutY="60.0" styleClass="font-text" text="Customer name:" AnchorPane.topAnchor="60.0" />
+                  <TextField fx:id="txtFirstname" layoutX="20.0" layoutY="86.0" prefHeight="25.0" prefWidth="123.0" promptText="Firstname" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="86.0" />
+                  <TextField fx:id="txtMI" layoutX="160.0" layoutY="86.0" prefHeight="25.0" prefWidth="40.0" promptText="M.I" AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="86.0" />
+                  <TextField fx:id="txtLastname" layoutX="220.0" layoutY="86.0" prefHeight="25.0" prefWidth="123.0" promptText="Lastname" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="86.0" />
+                  <Label layoutX="20.0" layoutY="117.0" styleClass="font-text" text="Customer Address:" />
+                  <TextField fx:id="txtStreet" layoutX="19.0" layoutY="139.0" prefHeight="25.0" prefWidth="209.0" promptText="Street, road, blk. no." />
+                  <Label layoutX="21.0" layoutY="248.0" styleClass="font-text" text="Conctact number" />
+                  <TextField fx:id="txtBarangay" layoutX="240.0" layoutY="139.0" prefHeight="25.0" prefWidth="106.0" promptText="Barangay" />
+                  <TextField fx:id="txtCity" layoutX="20.0" layoutY="174.0" prefHeight="25.0" prefWidth="124.0" promptText="City" />
+                  <TextField fx:id="txtProvince" layoutX="157.0" layoutY="174.0" prefHeight="25.0" prefWidth="190.0" promptText="Province" />
+                  <Separator layoutX="308.0" layoutY="15.0" orientation="VERTICAL" prefHeight="326.0" prefWidth="4.0" AnchorPane.rightAnchor="-2.0" />
+                  <Separator layoutX="3.0" layoutY="324.0" prefHeight="0.0" prefWidth="355.0" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="340.0" />
+                  <TextField fx:id="txtCountry" layoutX="20.0" layoutY="208.0" prefHeight="25.0" prefWidth="195.0" promptText="Country" />
+                  <TextField fx:id="txtCellphone" layoutX="20.0" layoutY="272.0" prefHeight="25.0" prefWidth="195.0" promptText="Cellphone number" />
+                  <TextField fx:id="txtLandline" layoutX="20.0" layoutY="306.0" prefHeight="25.0" prefWidth="195.0" promptText="Landline number" />
+                  <Label layoutX="22.0" layoutY="347.0" styleClass="font-header" stylesheets="@../assets/css/collectioncollectibles.css" text="Transaction Details" />
+                  <Separator layoutX="155.0" layoutY="357.0" prefHeight="1.0" prefWidth="200.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="357.0" />
+                  <Separator layoutX="170.0" layoutY="367.0" prefHeight="1.0" prefWidth="20.0" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="355.0" />
+                  <Separator layoutX="11.0" layoutY="25.0" orientation="VERTICAL" prefHeight="350.0" prefWidth="4.0" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="355.0" />
+                  <Separator layoutX="11.0" layoutY="365.0" orientation="VERTICAL" prefHeight="350.0" prefWidth="4.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="355.0" />
+                  <Separator layoutX="170.0" layoutY="420.0" prefHeight="0.0" prefWidth="359.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="705.0" />
+                  <Label layoutX="23.0" layoutY="375.0" styleClass="font-text" text="Product" />
+                  <TextField fx:id="txtProductNameCode" layoutX="22.0" layoutY="399.0" onKeyReleased="#setTableCutomerDelivery" prefHeight="25.0" prefWidth="316.0" promptText="Product code or produce name" />
+                  <TableView fx:id="tblTempDelivery" layoutX="22.0" layoutY="430.0" onKeyReleased="#removeItem" prefHeight="215.0" prefWidth="318.0">
+                    <columns>
+                      <TableColumn fx:id="temp_transaction_id" prefWidth="34.0" text="ID" />
+                      <TableColumn fx:id="temp_productName" prefWidth="131.0" text="Product name" />
+                        <TableColumn fx:id="temp_quantity" prefWidth="75.0" text="Quantity" />
+                        <TableColumn fx:id="temp_total" prefWidth="75.0" text="Total" />
+                    </columns>
+                  </TableView>
+                  <Button layoutX="125.0" layoutY="652.0" mnemonicParsing="false" onMouseClicked="#confirmTransaction" prefHeight="45.0" prefWidth="111.0" text="Submit" />
+                  <Button layoutX="23.0" layoutY="29.0" mnemonicParsing="false" onMouseClicked="#findCustomer" styleClass="button-find" text="Find customer">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/images/search.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </right>
+         <top>
+            <Label prefHeight="22.0" prefWidth="149.0" styleClass="font-header" text="Delivery" BorderPane.alignment="TOP_LEFT">
+               <BorderPane.margin>
+                  <Insets left="25.0" top="25.0" />
+               </BorderPane.margin>
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/Delivery.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
